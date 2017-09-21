@@ -1,2 +1,2 @@
 # radialToolkit
-My collection of tools for (golden angle) radial MRI reconstructions
+My collection of tools for radial MRI reconstructions
