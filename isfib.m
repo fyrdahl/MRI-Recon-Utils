@@ -1,4 +1,4 @@
-function [ out ] = isFib( in )
+function [ out ] = isfib( in )
     
     x1 = 5 * in^2 + 4;
     x2 = 5 * in^2 - 4;
