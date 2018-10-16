@@ -26,6 +26,6 @@ X = reshape(in,size(in,1)*size(in,2),size(in,3));
 nCoils = find(diag(S)/S(1)>tol,1,'last');
 out = reshape(X*V(:,1:nCoils),size(in,1),size(in,2),nCoils);
 
-% TODO: Could this be done more effectively with k-means clustering?
+% TODO: Could this be done more effectively?
 
 end
