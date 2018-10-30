@@ -30,14 +30,16 @@ if numel(sz) > ndims(A)
 end
 
 dims = numel(sz);
-m = size(A);
-if length(m) < length(sz)
-    m = [m, ones(1,length(s)-length(m))];
-end
 
 % Do we have to zero-pad? If yes, do so to the largest dimension.
 if max(size(A)) < max(sz)
     B = zeros(sz);
+    
+    m = size(A);
+    if length(m) < length(sz)
+        m = [m, ones(1,length(s)-length(m))];
+    end
+
     for d=1:dims
         idx{d} = floor(max(sz)/2)+1+ceil(-m(d)/2) : floor(max(sz)/2)+ceil(m(d)/2);
     end
